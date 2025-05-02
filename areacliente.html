@@ -3,57 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="areacliente.css"> 
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container text-left">
+    <!-- Container do Menu no topo à esquerda -->
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="img/logo1.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Space Burguer
+  </a>
+</nav>
+
+    <div class="container text-left conteudo-principal">
         <br>
         <div class="row">
-          <div class="col-6">
-            <h1>Minha Conta</h1><br>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Olá Cliente</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Bem Vindo de Volta</h6>
+            <div class="col-6">
+                <h1>Minha Conta</h1><br>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Olá Cliente</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Bem Vindo de Volta</h6>
+                    </div>
+                </div><br>
+                <div class="dropdown">
+                    <button 
+                        class="btn btn-secondary dropdown-toggle" 
+                        type="button" 
+                        id="dropdownMenuButton" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false"
+                    >
+                        Menu
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Dados Pessoais</a>
+                        <a class="dropdown-item" href="#">Login</a>
+                    </div>
                 </div>
-          </div><br>
-          <div class="dropdown">
-            <!-- Botão que abre o dropdown -->
-            <button 
-              class="btn btn-secondary dropdown-toggle" 
-              type="button" 
-              id="dropdownMenuButton" 
-              data-bs-toggle="dropdown" 
-              aria-expanded="false"
-            >
-              Menu
-            </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Dados Pessoais</a>
-            <a class="dropdown-item" href="#">Login</a>
-           </div>
-          </div></div>
-          <div class="col-6">
-            <br>
-            <h1>Dados Pessoais</h1><br>
-            <form>
-                <div class="form-group">
-                  <label for="exampleFormControlInput1">Nome do Cliente</label>
-                  <input type="text" class="form-control" id="nome" placeholder="nome do cliente id"><br>
-                  <label for="exampleFormControlInput1">Email address</label><br>
-                  <input type="email" class="form-control" id="email" placeholder="email"><br>
-                  <label for="exampleFormControlInput1">Data de nascimento</label><br>
-                  <input type="date" class="form-control" id="dtnasc" placeholder="Data de nascimento"><br>
-                </div></form>
-           
-          </div>
-          <div class="col">
-           
-          </div>
+            </div>
+            <div class="col-6">
+                <br>
+                <h1>Dados Pessoais</h1><br>
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome do Cliente</label>
+                        <input type="text" class="form-control" id="nome" placeholder="nome do cliente "><br>
+                        <label for="email">Email address</label><br>
+                        <input type="email" class="form-control" id="email" placeholder="email"><br>
+                        <label for="dtnasc">Data de nascimento</label><br>
+                        <input type="date" class="form-control" id="dtnasc" placeholder="Data de nascimento"><br>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
-    
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            const nome = localStorage.getItem("nome");
+            const email = localStorage.getItem("email");
+            const data = localStorage.getItem("data");
+
+            if (nome) document.getElementById("nome").value = nome;
+            if (email) document.getElementById("email").value = email;
+            if (data) document.getElementById("dtnasc").value = data;
+
+            const cardTitle = document.querySelector(".card-title");
+            if (cardTitle && nome) {
+                cardTitle.textContent = `Olá ${nome}`;
+            }
+        };
+    </script>
 </body>
 </html>
