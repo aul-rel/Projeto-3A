@@ -1,0 +1,120 @@
+/* Fonte Orbitron do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    background-image: url('universe-7148402_1920.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* Navbar */
+.navbar {
+    background-image: url('universe-7148402_1920.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-repeat: repeat;
+    border-bottom: 2px solid #ffcc00;
+}
+
+
+
+
+.navbar-brand {
+    color: #ffcc00 !important;
+    font-weight: bold;
+}
+
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* Conteúdo principal */
+.conteudo-principal {
+    padding: 40px 20px;
+    background-color: #2e2e2e; /* cinza escuro sólido */
+    color: #ffffff;
+    border: 2px solid #ffcc00;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+}
+
+
+
+
+/* Títulos */
+h1, h5, h6 {
+    color: #ffcc00;
+}
+
+/* Cartão de boas-vindas */
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #ffcc00;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.card-subtitle {
+    color: #cccccc !important;
+}
+
+/* Dropdown */
+.dropdown .btn-secondary {
+    background-color: #333333;
+    border-color: #ffcc00;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.dropdown-menu {
+    background-color: #1a1a1a;
+    border: 1px solid #ffcc00;
+}
+
+.dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown-item:hover {
+    background-color: #ffcc00;
+    color: #000000;
+}
+
+/* Formulários */
+.form-control {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #ffcc00;
+}
+
+.form-control:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px #ffcc00;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+label {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .conteudo-principal .row {
+        flex-direction: column;
+    }
+
+    .col-6 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
