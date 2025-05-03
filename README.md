@@ -1,2 +1,2 @@
 # Space Burguer
-A melhor hamburgueria da galáxia!
+O melhor hambúrguer da galáxia!
