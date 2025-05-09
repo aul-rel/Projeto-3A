@@ -1,41 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Login - Space Burguer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 0 20px #ffcc00;
+            text-align: center;
+        }
+        h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #0d0d0d;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #e6b800;
+        }
+        p {
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-
-    <div class="container text-left">
-        <div class="row">
-          <div class="col">
-          </div>
-          <div class="col">
-          </div>
-          <div class="col-6"><!-- Formulário para login -->
-            <br>
-            <h1>BEM VINDO DE VOLTA</h1><br>
-            <form>
-                <div class="mb-3">
-                  <label for="EntradaEmail" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="EntradaEmail" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                  <label for="EntradaSenha" class="form-label">Senha</label>
-                  <input type="password" class="form-control" id="EntradaSenha">
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Lembrar acesso</label>
-                </div>
-                <button type="submit" class="btn btn-primary">ENTRAR</button>
-              </form>
-          </div>
-        </div>
-      </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="pagina_principal.html">
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Senha" required><br>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </div>
 </body>
 </html>
