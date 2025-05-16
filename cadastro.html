@@ -71,5 +71,17 @@
         </form>
         <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
     </div>
+   <script>
+    document.querySelector('form[action="login.html"]').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const inputs = this.querySelectorAll('input');
+        const dadosCadastro = {
+            nome: inputs[0].value,
+            email: inputs[1].value,
+            senha: inputs[2].value
+        };
+        localStorage.setItem('dadosCadastro', JSON.stringify(dadosCadastro));
+    });
+</script>
 </body>
 </html>
