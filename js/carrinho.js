@@ -118,7 +118,7 @@ function finalizarPedido() {
     }
     alert("Pedido realizado com sucesso! 🚀🍔");
     localStorage.removeItem('carrinho');
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 }
 function mostrarMensagem(texto) {
     const overlay = document.getElementById('modalOverlay');
