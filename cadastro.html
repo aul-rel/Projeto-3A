@@ -5,83 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Space Burguer</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #0d0d0d;
-            color: #fff;
-            font-family: 'Orbitron', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #1a1a1a;
-            padding: 40px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 0 20px #ffcc00;
-            text-align: center;
-        }
-        h2 {
-            color: #ffcc00;
-            margin-bottom: 20px;
-        }
-        input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #ffcc00;
-            color: #0d0d0d;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        button:hover {
-            background-color: #e6b800;
-        }
-        p {
-            font-size: 0.9rem;
-            margin-top: 15px;
-        }
-        a {
-            color: #ffcc00;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/cadastro.css">
 </head>
 <body>
     <div class="container">
         <h2>Cadastro</h2>
-        <form action="login.html">
-            <input type="text" placeholder="Nome completo" required><br>
-            <input type="email" placeholder="Email" required><br>
-            <input type="password" placeholder="Senha" required><br>
+        <form id="formCadastro">
+            <input type="text" id="nome" placeholder="Nome completo" required><br>
+            <input type="email" id="email" placeholder="Email" required><br>
+            <input type="password" id="senha" placeholder="Senha" required><br>
             <button type="submit">Cadastrar</button>
         </form>
         <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
     </div>
-   <script>
-    document.querySelector('form[action="login.html"]').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const inputs = this.querySelectorAll('input');
-        const dadosCadastro = {
-            nome: inputs[0].value,
-            email: inputs[1].value,
-            senha: inputs[2].value
-        };
-        localStorage.setItem('dadosCadastro', JSON.stringify(dadosCadastro));
-    });
-</script>
+    <script src="../js/cadastro.js"></script>
 </body>
 </html>

@@ -1,0 +1,138 @@
+/* Fonte Orbitron do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Estilo do Header */
+.custom-menu {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #ffcc00;
+}
+
+.custom-menu h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ffcc00;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.custom-menu nav {
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.custom-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.custom-menu a:hover {
+    color: #ffcc00;
+}
+
+.custom-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffcc00;
+    transition: width 0.3s ease;
+}
+
+.custom-menu a:hover::after {
+    width: 100%;
+}
+
+/* Estilo do Body */
+body {
+    background-color: #0d0d0d !important;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    padding: 40px 20px;
+    background-color: #2e2e2e;
+    border: 2px solid #ffcc00;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+}
+
+/* Títulos */
+.conteudo-principal h1 {
+    color: white;
+}
+
+/* Estilos para o Card */
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #ffcc00;
+}
+
+.card-title {
+    color: #ffcc00; /* Título do card em amarelo */
+}
+
+.card-subtitle {
+    color: #ffcc00; /* Subtítulo do card em amarelo */
+}
+
+/* Botão de mostrar senha */
+.password-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: -30px;
+    cursor: pointer;
+    filter: invert(100%);
+    transition: all 0.3s ease;
+}
+
+.password-toggle:hover {
+    filter: invert(79%) sepia(61%) saturate(1193%) hue-rotate(360deg) brightness(102%) contrast(106%);
+}
+
+.password-toggle img {
+    width: 20px;
+    height: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .custom-menu h1 {
+        font-size: 2rem;
+    }
+    
+    .custom-menu a {
+        font-size: 1rem;
+        margin: 0 10px;
+        display: inline-block;
+        padding: 5px 0;
+    }
+    
+    .conteudo-principal .row {
+        flex-direction: column;
+    }
+
+    .col-6 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
