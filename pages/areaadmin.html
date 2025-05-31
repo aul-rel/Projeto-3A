@@ -5,11 +5,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Área Administrativa - Hamburgueria</title>
-  <link rel="stylesheet" href="../css/areaadmin.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    header {
+      background-color: #333333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #1e1e1e;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav button {
+      background-color: #2c2c2c;
+      border: 1px solid #444;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      color: #fff;
+    }
+    nav button:hover {
+      background-color: #3a3a3a;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table th, table td {
+      padding: 10px;
+      border: 1px solid #333;
+      text-align: left;
+    }
+    .btn {
+      background-color: #555555;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #777777;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Administração - Hamburgueria</h1>
+    <h1>Space Burguer</h1>
   </header>
 
   <nav>
