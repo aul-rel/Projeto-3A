@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Burguer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <header>
+        <h1>Space Burguer</h1>
+        <header class="custom-menu">
+            <nav>
+                <div id="perfilUsuario">
+                    <img id="fotoPerfil" src="img/perfil.png" alt="Foto do usuário" style="cursor:pointer;" onclick="acessarAreaCliente()">
+                </div>
+                <a href="#home">Home</a>
+                <a href="#menu">Cardápio</a>
+                <a href="#contact">Contato</a>
+                <a href="pages/login.html">Entre</a>
+                <a href="pages/cadastro.html">Cadastre-se</a>
+                <a href="pages/carrinho.html">Carrinho</a>
+            </nav>
+        </header>
+    </header>
+    <section class="hero" id="home">
+        <h2>Bem-vindo ao Space Burguer</h2>
+        <p>O melhor hambúrguer da galáxia!</p>
+    </section>
+    <section class="menu" id="menu">
+        <h2>Nosso Cardápio</h2>
+
+        <!-- Burgers Category -->
+        <div class="menu-category">
+            <h3>Hambúrgueres</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/burguers/b1.jpg" alt="Galactic Classic">
+                    <h4>Galactic Burguer</h4>
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <p>O clássico hambúrguer com um toque sideral.</p>
+                    <div class="price">R$10,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Galactic Burguer', 10.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/burguers/b2.jpg" alt="Astro Cheese">
+                    <h4>Astro Cheese</h4>
+                    <div class="stars">⭐⭐⭐</div>
+                    <p>Delicioso queijo de outra galáxia.</p>
+                    <div class="price">R$12,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Astro Cheese', 12.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/burguers/b3.jpg" alt="Rocket BBQ">
+                    <h4>Rocket Barbecue</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>Sabor defumado de churrasco que vai despertar o seu paladar.</p>
+                    <div class="price">R$13,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Rocket Barbecue', 13.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/burguers/b4.jpg" alt="Galactic Classic">
+                    <h4>Burger Eclipse</h4>
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <p>Um sabor que apaga a luz da concorrência!</p>
+                    <div class="price">R$12,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Burger Eclipse', 12.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/burguers/b5.jpg" alt="Astro Cheese">
+                    <h4>Via Láctea Cheddar</h4>
+                    <div class="stars">⭐⭐</div>
+                    <p>Tão gostoso que parece coisa de outro universo.</p>
+                    <div class="price">R$15,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Via Láctea Cheddar', 15.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/burguers/b6.jpg" alt="Rocket BBQ">
+                    <h4>Saturn Bacon</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>Um clássico com órbita própria!</p>
+                    <div class="price">R$10,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Saturn Bacon', 10.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/burguers/b7.jpg" alt="Astro Cheese">
+                    <h4>UFO Chicken</h4>
+                    <div class="stars">⭐⭐⭐</div>
+                    <p>Um disco voador de sabor.</p>
+                    <div class="price">R$14,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('UFO Chicken', 14.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/burguers/b8.jpg" alt="Rocket BBQ">
+                    <h4>Estrelinha Kids</h4>
+                    <div class="stars">⭐</div>
+                    <p>A refeição perfeita para cadetes espaciais.</p>
+                    <div class="price">R$7,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Estrelinha Kids', 7.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Sides Category -->
+        <div class="menu-category">
+            <h3>Acompanhamentos</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/sides/batatinha.jpg" alt="Galaxy Fries">
+                    <h4>Batatas Galácticas</h4>
+                    <div class="stars">⭐⭐⭐</div>
+                    <p>Batatas fritas crocantes polvilhadas com tempero cósmico.</p>
+                    <div class="price">R$5,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Batatas Galácticas', 5.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/sides/cebolinha.jpg" alt="Astro Rings">
+                    <h4>Anéis de Cebola</h4>
+                    <div class="stars">⭐⭐⭐⭐</div>
+                    <p>Anéis de cebola com um crocante galáctico.</p>
+                    <div class="price">R$6,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Anéis de Cebola', 6.99)">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/sides/monica.webp  " alt="Astro Rings">
+                    <h4>Miojo da turma da Mônica</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐⭐⭐⭐⭐</div>
+                    <p>O melhor miojo de legumes do mundo!</p>
+                    <div class="price">R$151000,69</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Miojo da Mõnica', 151000,69)">Adicionar ao
+                        Carrinho</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks Category -->
+        <div class="menu-category">
+            <h3>Bebidas</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/juices/ginger-juice-4896003_1920.jpg" alt="Cosmic Cola">
+                    <h4>Solar Fizz</h4>
+                    <div class="stars">⭐⭐⭐</div>
+                    <p>Um refresco refrescante que vai explodir seu paladar.</p>
+                    <div class="price">R$4,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Solar Fizz', 4.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/juices/juice-2561339_1920.jpg" alt="Starfruit Shake">
+                    <h4>Triple StarBerry</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>Um milk-shake doce feito com sorvete e estrelas.</p>
+                    <div class="price">R$5,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Triple StarBerry', 5.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/juices/sugarcane-5388628_1920.jpg" alt="Cosmic Cola">
+                    <h4>Névoa de Netuno</h4>
+                    <div class="stars">⭐⭐</div>
+                    <p>Refrigerante azul com toque de limão e hortelã.</p>
+                    <div class="price">R$4,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Névoa de Netuno', 4.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/juices/500.png" alt="Starfruit Shake">
+                    <h4>Pó de Estrela</h4>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>Milkshake de baunilha com glitter comestível.</p>
+                    <div class="price">R$5,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Pó de Estrela', 5.99)">Adicionar ao
+                        Carrinho</button>
+
+                </div>
+                <div class="menu-item">
+                    <img src="img/juices/grape-juice-recipe.jpg" alt="Cosmic Cola">
+                    <h4>Fusão Solar</h4>
+                    <div class="stars">⭐⭐⭐</div>
+                    <p>Suco de frutas cítricas com explosão de maracujá.</p>
+                    <div class="price">R$6,99</div>
+                    <button class="add-to-cart" onclick="adicionarAoCarrinho('Fusão Solar', 6.99)">Adicionar ao
+                        Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/adicionar-carrinho.js"></script>
+        <script src="js/foto-home.js"></script>
+        <script src="js/acessoAreaClienteLogado.js"></script>
+    </section>
+    <footer id="contact">
+        <p>Contatos: atendimento@spaceburguer.com.br | Telefone: (21) 867-5309</p>
+        <p>&copy; 2025 Hamburgueria Space Burguer. Todos os direitos não estão reservados.</p>
+    </footer>
+
+</body>
+
+</html>
