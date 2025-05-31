@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/cadastro.css">
 </head>
+
 <body>
     <div class="container">
         <h2>Cadastro</h2>
         <form id="formCadastro">
+            <label for="foto">Foto de Perfil:</label>
+            <input type="file" id="foto" accept="image/*" required>
             <input type="text" id="nome" placeholder="Nome completo" required><br>
             <input type="email" id="email" placeholder="Email" required><br>
             <input type="password" id="senha" placeholder="Senha" required><br>
@@ -20,4 +24,5 @@
     </div>
     <script src="../js/cadastro.js"></script>
 </body>
+
 </html>

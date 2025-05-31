@@ -18,4 +18,5 @@ document.getElementById('formLogin').addEventListener('submit', function(e) {
         alert('Nenhum cadastro encontrado. Por favor, cadastre-se primeiro.');
         window.location.href = 'cadastro.html';
     }
+    
 });

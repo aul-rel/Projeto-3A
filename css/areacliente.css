@@ -136,3 +136,57 @@ body {
         margin-bottom: 30px;
     }
 }
+#editarDados,
+#salvarDados {
+    margin-top: 10px;
+    width: 100%;
+}
+/* Botão Alterar Foto */
+.btn-foto {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.btn-foto:hover {
+    background-color: #e6b800;
+}
+
+/* Botão Sair */
+.btn-sair {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.btn-sair:hover {
+    background-color: #cc0000;
+}
+.password-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: -30px;
+    cursor: pointer;
+    filter: invert(100%);
+    transition: all 0.3s ease;
+}
+
+.password-toggle:hover {
+    filter: invert(79%) sepia(61%) saturate(1193%) hue-rotate(360deg) brightness(102%) contrast(106%);
+}
+
+.password-toggle img {
+    width: 20px;
+    height: 20px;
+}

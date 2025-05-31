@@ -5,6 +5,9 @@ const finalizarBtn = document.getElementById('finalizarBtn');
 const limparBtn = document.getElementById('limparBtn');
 const modalOverlay = document.getElementById('modalOverlay');
 const modalAlert = document.getElementById('modalAlert');
+const modalPagamento = document.getElementById('modalPagamento');
+const formPagamento = document.getElementById('formPagamento');
+const btnCancelar = document.getElementById('btnCancelar');
 
 function mostrarMensagem(texto) {
 modalAlert.textContent = texto;
@@ -116,10 +119,34 @@ function finalizarPedido() {
         mostrarMensagem("Seu carrinho está vazio!");
         return;
     }
-    alert("Pedido realizado com sucesso! 🚀🍔");
+
+    // Criar o pedido finalizado com data, itens e total
+    const pedido = {
+        id: Date.now(), // id único baseado em timestamp
+        data: new Date().toLocaleString('pt-BR'),
+        itens: [...carrinho],
+        total: carrinho.reduce((acc, item) => acc + item.preco * item.quantidade, 0)
+    };
+
+    // Pegar o histórico atual de pedidos, ou iniciar vazio
+    let pedidosFinalizados = JSON.parse(localStorage.getItem('pedidosFinalizados')) || [];
+
+    // Adicionar o novo pedido ao histórico
+    pedidosFinalizados.push(pedido);
+
+    // Salvar de volta no localStorage
+    localStorage.setItem('pedidosFinalizados', JSON.stringify(pedidosFinalizados));
+
+    // Limpar carrinho
+    carrinho = [];
     localStorage.removeItem('carrinho');
-    window.location.href = "index.html";
+
+    alert("Pedido realizado com sucesso! 🚀🍔");
+
+    // Redirecionar para página "Meus Pedidos" (precisa criar essa página)
+    window.location.href = "meus-pedidos.html";
 }
+
 function mostrarMensagem(texto) {
     const overlay = document.getElementById('modalOverlay');
     const alertBox = document.getElementById('modalAlert');
@@ -144,3 +171,13 @@ if (event.target === modalOverlay) {  // só fecha se clicou no fundo, não dent
 modalOverlay.classList.remove('show');
 }
 });
+// Verificar se o usuário está logado
+const logado = localStorage.getItem('logado');
+
+if (!logado) {
+    mostrarMensagem('Você precisa estar logado para acessar o carrinho!');
+    setTimeout(() => {
+        window.location.href = 'login.html';
+    }, 2500);
+}
+
