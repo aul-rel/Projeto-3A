@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f6f6;
+}
+
+header {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+#logo img {
+    cursor: pointer;
+    margin-left: 40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+/* Icons Colors
+.fa-heart{
+    color: red;
+}
+.fa-shopping-cart{
+    color: brown;
+}
+.fa-phone{
+    color: yellow;
+}
+.fa-map-marker-alt{
+    color: rgb(0, 255, 0);
+}
+*/
+ul.menu li {
+    font-size: 0.9rem;
+}
+ul.menu .link{
+    color: rgb(0, 180, 0);
+}
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 40vh;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.search-container i {
+    position: absolute;
+    right: 10px;
+    color: #aaa;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.perfil-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil-nome {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Esconde os ícones por padrão */
+.icon-hidden {
+    display: none;
+}
+
+/* Responsivo */
+@media (max-width: 887px) {
+    #menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        left: 20px; /* Posiciona o menu burger à esquerda */
+        top: 20px;  /* Ajuste para que fique no topo */
+    }
+
+    ul.menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+    }
+    ul.menu.show {
+        display: flex;
+    }
+
+    /* Barra de pesquisa embaixo */
+    .menu-container {
+        flex-direction: column; /* Empilha os elementos */
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%; /* Faz a barra de pesquisa ocupar toda a largura */
+        margin-top: 10px; /* Espaço entre a logo/menu burger e a barra de pesquisa */
+    }
+
+    .search-container input {
+        width: 100%; /* Faz o campo de pesquisa ocupar toda a largura */
+    }
+
+    /* Exibe os ícones ao lado direito da tela quando responsivo */
+    ul.icon-hidden {
+        cursor: pointer;
+        display: flex;
+        gap: 30px;
+        position: absolute;
+        top: 20px;  /* Ajuste para o topo */
+        right: 20px;  /* Ajuste para o lado direito */
+        z-index: 10;
+    }
+
+    /* Alinha os ícones horizontalmente */
+    ul.icon-hidden li {
+        display: inline-block;
+        font-size: 20px;  /* Ajuste do tamanho do ícone */
+        color: #333; /* Cor dos ícones */
+    }
+    .icon-hidden {
+        display: flex;
+        gap: 15px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    #location {
+        display: flex;
+        gap: 5px;
+        flex-direction: row; /* Alinha o ícone e o texto lado a lado */
+    }
+
+    .location-text {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+    }
+
+    .location-text p {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .location-text span {
+        font-size: 0.9rem;
+        color: #555;
+    }
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.carousel li {
+    list-style: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+}

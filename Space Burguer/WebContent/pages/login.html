@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Space Burguer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="formLogin">
+            <input type="email" id="email" placeholder="Email" required><br>
+            <input type="password" id="senha" placeholder="Senha" required><br>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+
+        <!-- 🔥 Botão de voltar para o home -->
+        <a href="../pages/home.html" class="voltar-home">← Voltar para Home</a>
+    </div>
+    <style>
+        .voltar-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.voltar-home:hover {
+    background-color: #555;
+}
+
+    </style>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
